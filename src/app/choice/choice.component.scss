@@ -1,0 +1,243 @@
+.card {
+  background-color: #ffffff;
+  width: 100%;
+
+  max-width: 68%;
+  border-radius: 12px;
+  display: flex;
+  flex-flow: column;
+  font-family: Montserrat;
+}
+
+#progress-bar {
+  width: inherit;
+  height: 8px;
+
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background: linear-gradient(
+    to right,
+    #00adef 0%,
+    #00adef 20%,
+    #d8d8d8 20%,
+    #d8d8d8 100%
+  );
+}
+.progress {
+  position: fixed;
+
+  z-index: 0;
+  border-top-left-radius: 8px;
+  background-color: #00adef;
+  height: 8px;
+}
+.ques {
+  padding-top: 2rem;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 28px;
+}
+.grid-container {
+  flex-grow: 1;
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-flow: column;
+  overflow-y: scroll;
+  justify-content: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.grid-container::-webkit-scrollbar {
+  display: none;
+}
+mat-grid-list {
+  height: 100%;
+  width: 100%;
+}
+
+:host ::ng-deep .mat-grid-tile .mat-figure {
+  flex-flow: column;
+}
+.tile-container {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.house-img {
+  height: 80%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.houseImage {
+  width: auto;
+  max-height: 75%;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1rem;
+}
+.house-type {
+  height: 20%;
+}
+.budget-selector {
+  flex-grow: 1;
+
+  display: flex;
+  flex-flow: column;
+  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+.selected-budget {
+  font-size: 28px;
+  color: #00adef;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+}
+input {
+  width: 70%;
+  margin-bottom: 1rem;
+}
+#rangeSlider {
+  -webkit-appearance: none;
+
+  height: 8px;
+  background: linear-gradient(
+    to right,
+    #00adef 0%,
+    #00adef 50%,
+    #d8d8d8 50%,
+    #d8d8d8 100%
+  );
+  outline: none;
+  border-radius: 25%;
+  -webkit-transition: 0.2s;
+}
+#rangeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 2px solid #00adef;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#rangeSlider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border: 2px solid #00adef;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ranges {
+  width: 70%;
+  height: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 3rem;
+}
+
+.values.v1 {
+  text-align: left;
+  width: 23%;
+}
+.values.v2 {
+  text-align: left;
+  width: 17%;
+}
+.values.v3 {
+  text-align: center;
+  width: 20%;
+}
+.values.v4 {
+  text-align: right;
+  width: 17%;
+}
+.values.v5 {
+  text-align: right;
+  width: 23%;
+}
+
+.btn {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 10rem;
+
+  border-radius: 12px;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #00adef;
+
+  cursor: pointer;
+}
+.btn.btn1 {
+  border: 2px solid #9de2e5;
+  height: 2.5rem;
+}
+.btn.btn2 {
+  border: 2px solid #00adef;
+  height: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.btn:hover {
+  background-color: #00adef;
+  border: 2px solid #00adef;
+  color: #ffffff;
+}
+a {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 360px) {
+  .brand-logo {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+  input {
+    width: 80%;
+  }
+  .ranges {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .brand-logo {
+    padding: 2rem 1rem 2rem 2rem;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+  input {
+    width: 100%;
+  }
+  .ranges {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1279px) {
+  .brand-logo {
+    padding: 2rem 3rem 2rem 3rem;
+  }
+
+  .card {
+    max-width: 80%;
+  }
+}

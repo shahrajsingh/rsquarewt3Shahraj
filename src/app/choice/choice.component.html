@@ -1,0 +1,50 @@
+<div class="card">
+  <div id="progress-bar"></div>
+  <div class="ques" id="ques">
+    What is the <b>Type of Home</b> you want to sell
+  </div>
+  <div id="wrapper"></div>
+  <div class="grid-container" *ngIf="quesNo == 0">
+    <mat-grid-list rowHeight="48%" cols="{{ colSize }}" gutterSize="0.2rem"
+      ><mat-grid-tile *ngFor="let i of homes">
+        <div class="tile-container">
+          <div class="house-img">
+            <img class="houseImage" src="{{ i.img }}" />
+          </div>
+          <div class="house-type">
+            <button class="btn btn1" (click)="next()">
+              {{ i.type }}
+            </button>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <a href="#" (click)="next()">Other</a>
+  </div>
+  <div class="budget-selector" *ngIf="quesNo == 1">
+    <div class="selected-budget">${{ budget }}</div>
+    <div class="slider">
+      <input
+        type="range"
+        min="1"
+        max="5"
+        step="1"
+        id="rangeSlider"
+        #slide="ngModel"
+        ngModel
+        (ngModelChange)="budgetselected(slide.value)"
+      />
+    </div>
+
+    <div class="ranges">
+      <div class="values v1">$100k</div>
+      <div class="values v2">$250k</div>
+      <div class="values v3">$750k</div>
+      <div class="values v4">$1M</div>
+      <div class="values v5">$5M+</div>
+    </div>
+
+    <button class="btn btn2" (click)="next()">Continue</button>
+    <a href="#" (click)="back()">Back</a>
+  </div>
+</div>
