@@ -55,8 +55,7 @@ export class ChoiceComponent implements OnInit {
   }
   s = '<p>abc</p>';
   ngOnInit(): void {
-    console.log(this.mobileQuery.matches);
-    if (this.mobileQuery) {
+    if (this.mobileQuery.matches) {
       this.colSize = 1;
     } else {
       this.colSize = 2;
